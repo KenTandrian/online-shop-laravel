@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Form;
             <br>
 
             <form method="POST" action="{{ URL::to('siswa') }}">
-                {{ csrf_field() }}
+                @csrf
                 <label class="form-label" for="nama">Name</label>
                 <input class="form-control" type="text" name="nama">
                 <br>

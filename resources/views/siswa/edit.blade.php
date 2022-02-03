@@ -40,8 +40,8 @@
             <br>
 
             <form method="POST" action="/siswa/{{$siswa->id_siswa}}"> 
-                {{ method_field('PUT') }}
-                {{ csrf_field() }}
+                @method('PUT')
+                @csrf
                 <label class="form-label" for="nama">Name</label>
                 <input class="form-control" type="text" name="nama" value="{{ $siswa->nama }}">
                 <br>
