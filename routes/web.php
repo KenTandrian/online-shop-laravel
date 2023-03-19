@@ -30,3 +30,6 @@ Route::get('/latihan2/{nama}', function($nama) {
 });
 
 Route::resource('siswa', 'SiswaController');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
