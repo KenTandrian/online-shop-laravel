@@ -1,11 +1,14 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "ken-tandrian/online-shop-laravel",
+    "description": "A fullstack online shop application built using Laravel.",
+    "keywords": [
+        "shop",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.3.0",
+        "php": "^8.1",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^8.0",
         "laravel/helpers": "^1.5",
@@ -35,8 +38,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {

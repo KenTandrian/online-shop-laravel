@@ -7,7 +7,7 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  default-php-version: "7.4"
+  default-php-version: "8.1"
   coverage-with: "sqlite"
 
 jobs:
@@ -32,14 +32,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ["7.4"]
+        php-version: ["8.1"]
         connection: [sqlite, mysql, pgsql]
         testsuite: [Unit]
         coverage: [true] # run test with coverage, if 'coverage-with' match with the connection
         include:
           - connection: sqlite
             testsuite: Integration
-            php-version: "7.4"
+            php-version: "8.1"
             coverage: false
 
     steps:
