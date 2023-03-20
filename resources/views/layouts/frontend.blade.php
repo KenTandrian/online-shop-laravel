@@ -36,7 +36,7 @@
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
                     <a href="/" style="color:white; font-size:24px;">
-                        <img src="user/img/book.png" width="50px" height="50px" alt="" title="Tokoku" />
+                        <img src="/user/img/book.png" width="50px" height="50px" alt="" title="Tokoku" />
                         Tokoku
                     </a>
                 </div>
@@ -119,14 +119,14 @@
                     <div class="single-footer-widget mail-chimp">
                         <h6 class="mb-20">Instagram Feed</h6>
                         <ul class="instafeed d-flex flex-wrap">
-                            <li><img src="user/img/i1.jpg" alt=""></li>
-                            <li><img src="user/img/i2.jpg" alt=""></li>
-                            <li><img src="user/img/i3.jpg" alt=""></li>
-                            <li><img src="user/img/i4.jpg" alt=""></li>
-                            <li><img src="user/img/i5.jpg" alt=""></li>
-                            <li><img src="user/img/i6.jpg" alt=""></li>
-                            <li><img src="user/img/i7.jpg" alt=""></li>
-                            <li><img src="user/img/i8.jpg" alt=""></li>
+                            <li><img src="/user/img/i1.jpg" alt=""></li>
+                            <li><img src="/user/img/i2.jpg" alt=""></li>
+                            <li><img src="/user/img/i3.jpg" alt=""></li>
+                            <li><img src="/user/img/i4.jpg" alt=""></li>
+                            <li><img src="/user/img/i5.jpg" alt=""></li>
+                            <li><img src="/user/img/i6.jpg" alt=""></li>
+                            <li><img src="/user/img/i7.jpg" alt=""></li>
+                            <li><img src="/user/img/i8.jpg" alt=""></li>
                         </ul>
                     </div>
                 </div>
