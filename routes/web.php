@@ -32,3 +32,16 @@ Route::group(['prefix'=>'user'], function() {
         return view('user.mybook');
     });
 });
+
+Route::group(['prefix'=>'admin'], function() {
+    // Book management
+    Route::get('/book', function () {
+        return view('admin.book.index');
+    });
+    Route::get('/book/create', function () {
+        return view('admin.book.create');
+    });
+    Route::get('/book/update', function () {
+        return view('admin.book.update');
+    });
+});
