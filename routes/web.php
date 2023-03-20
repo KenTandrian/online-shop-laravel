@@ -26,3 +26,9 @@ Route::get('/list', function () {
 Route::get('/detail', function () {
     return view('detail');
 });
+
+Route::group(['prefix'=>'user'], function() {
+    Route::get('/mybook', function () {
+        return view('user.mybook');
+    });
+});
