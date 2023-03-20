@@ -4,7 +4,7 @@
     {{-- Mobile Specific Meta --}}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {{-- Favicon --}}
-    <link rel="shortcut icon" href="user/img/fav.png">
+    <link rel="shortcut icon" href="user/img/book.png">
     {{-- Author Meta --}}
     <meta name="author" content="Ken Tandrian">
     {{-- Meta Description --}}
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700" rel="stylesheet">
     {{-- CSS --}}
     <link rel="stylesheet" href="{{ URL::asset('user/css/linearicons.css') }}">
-    <link rel="stylesheet" href="{{ URL::asset('user/css/font-awesome.min.css.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('user/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('user/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('user/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('user/css/nice-select.css') }}">
