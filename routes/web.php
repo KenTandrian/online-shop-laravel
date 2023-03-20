@@ -23,3 +23,6 @@ Route::get('/', function () {
 Route::get('/list', function () {
     return view('list');
 });
+Route::get('/detail', function () {
+    return view('detail');
+});
