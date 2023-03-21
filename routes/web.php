@@ -56,13 +56,12 @@ Route::group(['prefix'=>'admin'], function() {
     });
 
     // Transaction management
-    Route::get('/transaction', function () {
-        return view('admin.transaction.index');
-    });
-    Route::get('/transaction/create', function () {
-        return view('admin.transaction.create');
-    });
-    Route::get('/transaction/update', function () {
-        return view('admin.transaction.update');
+    Route::group(['prefix'=>'transaction'], function() {
+        Route::get('/', 'TransactionController@index');
+        Route::get('create', 'TransactionController@create');
+        Route::post('/', 'TransactionController@store');
+        Route::get('{id}/edit', 'TransactionController@edit');
+        Route::post('{id}/update', 'TransactionController@update');
+        Route::delete('{id}', 'TransactionController@destroy');
     });
 });

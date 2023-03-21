@@ -19,13 +19,19 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($transaction as $data)
                 <tr>
-                    <td>:id</td>
-                    <td>:name</td>
-                    <td>:nama_buku</td>
-                    <td>:jumlah</td>
-                    <td>:actions</td>
+                    <td>{{ $data->id }}</td>
+                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->title }}</td>
+                    <td>{{ $data->amount }}</td>
+                    <td>
+                        <a href="#" class="btn btn-xs btn-info">Detail</a>
+                        <a href="#" class="btn btn-xs btn-warning">Edit</a>
+                        <a href="#" class="btn btn-xs btn-danger">Delete</a>
+                    </td>
                 </tr>
+                @endforeach
             </tbody>
             <tfoot>
                 <tr>
