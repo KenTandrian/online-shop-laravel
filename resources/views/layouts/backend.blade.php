@@ -126,7 +126,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/admin/transaksi">
+                        <a href="/admin/transaction">
                             <i class="fa fa-shopping-cart"></i> <span>Transaksi</span>
                         </a>
                     </li>

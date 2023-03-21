@@ -55,4 +55,15 @@ Route::group(['prefix'=>'admin'], function() {
     Route::get('/user/update', function () {
         return view('admin.user.update');
     });
+
+    // Transaction management
+    Route::get('/transaction', function () {
+        return view('admin.transaction.index');
+    });
+    Route::get('/transaction/create', function () {
+        return view('admin.transaction.create');
+    });
+    Route::get('/transaction/update', function () {
+        return view('admin.transaction.update');
+    });
 });
