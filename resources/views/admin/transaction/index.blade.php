@@ -2,7 +2,7 @@
 @section('content')
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Data Table With Full Features</h3>
+        <h3 class="box-title">Daftar Transaksi</h3>
 
         <a href="transaction/create" class="btn btn-info btn-md pull-right"><i class="fa fa-plus"> Tambah</i> </a>
     </div>

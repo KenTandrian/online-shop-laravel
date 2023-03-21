@@ -23,6 +23,17 @@
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" value="" placeholder="Masukkan Password">
                 </div>
+                <div class="form-group">
+                    <h5>Roles</h5>
+                    <div class="form-check">
+                        <input type="checkbox" id="admin" name="admin" value="Admin" @checked($user->isAdmin)>
+                        <label for="admin">Admin</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="member" name="member" value="Member" @checked($user->isMember)>
+                        <label for="member">Member</label>
+                    </div>
+                </div>
             </div>
             <!-- /.box-body -->
 

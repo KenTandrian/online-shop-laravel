@@ -2,7 +2,7 @@
 @section('content')
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Data Table With Full Features</h3>
+        <h3 class="box-title">Daftar Pengguna</h3>
 
         <a href="user/create" class="btn btn-info btn-md pull-right"><i class="fa fa-plus"> Tambah</i> </a>
     </div>
@@ -25,7 +25,7 @@
                     <td>{{ $data->email }}</td>
                     <td>
                         <a href="{{ 'user/'.$data->id.'/edit' }}" class="btn btn-xs btn-warning">Edit</a>
-                        <form action="user/{{ $data->id }}" method="POST">
+                        <form action="user/{{ $data->id }}" method="POST" style="display: inline-block">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button 

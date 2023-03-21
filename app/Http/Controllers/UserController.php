@@ -23,22 +23,27 @@ class UserController extends Controller
     {
         $nama = $request->nama;
         $email = $request->email;
+        $isAdmin = $request->admin;
+        $isMember = $request->member;
         $password = bcrypt($request->password);
 
         $user = new User;
         $user->name = $nama;
         $user->email = $email;
         $user->password = $password;
-        $user->attachRole('admin');
-        $user->attachRole('member');
         $user->save();
 
+        if ($isAdmin) $user->attachRole('admin');
+        if ($isMember) $user->attachRole('member');
+        
         return redirect('admin/user');
     }
 
     public function edit($id)
     {
         $user = User::find($id);
+        $user->isAdmin = $user->hasRole('admin');
+        $user->isMember = $user->hasRole('member');
         return view('admin.user.update', compact('user'));
     }
 
@@ -46,15 +51,24 @@ class UserController extends Controller
     {
         $nama = $request->nama;
         $email = $request->email;
+        $isAdmin = $request->admin;
+        $isMember = $request->member;
         $password = bcrypt($request->password);
 
         $user = User::find($id);
         $user->name = $nama;
         $user->email = $email;
         $user->password = $password;
-        $user->attachRole('admin');
-        $user->attachRole('member');
         $user->save();
+
+        $isPreviouslyAdmin = $user->hasRole('admin');
+        $isPreviouslyMember = $user->hasRole('member');
+
+        if ($isAdmin && !$isPreviouslyAdmin) $user->attachRole('admin');
+        else if (!$isAdmin && $isPreviouslyAdmin) $user->detachRole('admin');
+        
+        if ($isMember && !$isPreviouslyMember) $user->attachRole('member');
+        else if (!$isMember && $isPreviouslyMember) $user->detachRole('member');
 
         return redirect('admin/user');
     }
