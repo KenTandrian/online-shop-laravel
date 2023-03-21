@@ -36,14 +36,13 @@ Route::group(['prefix'=>'user'], function() {
 
 Route::group(['prefix'=>'admin'], function() {
     // Book management
-    Route::get('/book', function () {
-        return view('admin.book.index');
-    });
-    Route::get('/book/create', function () {
-        return view('admin.book.create');
-    });
-    Route::get('/book/update', function () {
-        return view('admin.book.update');
+    Route::group(['prefix'=>'book'], function() {
+        Route::get('/', 'BookController@index');
+        Route::get('create', 'BookController@create');
+        Route::post('/', 'BookController@store');
+        Route::get('{id}/edit', 'BookController@edit');
+        Route::post('{id}/update', 'BookController@update');
+        Route::delete('{id}', 'BookController@destroy');
     });
 
     // User management

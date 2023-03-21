@@ -8,20 +8,20 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" action="/admin/buku" method="post">
+        <form role="form" action="/admin/book" method="post">
             {{csrf_field()}}
             <div class="box-body">
                 <div class="form-group">
-                    <label for="nama_buku">Nama Buku</label>
-                    <input type="text" name="nama_buku" id="nama_buku" class="form-control" placeholder="Masukkan Nama Buku">
+                    <label for="title">Nama Buku</label>
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Masukkan Nama Buku">
                 </div>
                 <div class="form-group">
-                    <label for="pengarang">Pengarang</label>
-                    <input type="text" name="pengarang" id="pengarang" class="form-control" placeholder="Masukkan Nama Pengarang">
+                    <label for="author">Pengarang</label>
+                    <input type="text" name="author" id="author" class="form-control" placeholder="Masukkan Nama Pengarang">
                 </div>
                 <div class="form-group">
-                    <label for="penerbit">Penerbit</label>
-                    <input type="text" name="penerbit" id="penerbit" class="form-control" placeholder="Masukkan Nama Pengarang">
+                    <label for="publisher">Penerbit</label>
+                    <input type="text" name="publisher" id="publisher" class="form-control" placeholder="Masukkan Nama Pengarang">
                 </div>
             </div>
             <!-- /.box-body -->
