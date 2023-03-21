@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Siswa;
+use App\Models\Siswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 

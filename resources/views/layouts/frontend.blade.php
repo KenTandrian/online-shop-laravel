@@ -42,10 +42,24 @@
                 </div>
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
-                        <li class="menu-active"><a href="/">Berkita</a></li>
+                        <li class="menu-active"><a href="/">Beranda</a></li>
                         <li><a href="/list">List Buku</a></li>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Register</a></li>
+                        @if (!\Auth::user())
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Register</a></li>
+                        @else
+                            <li><a href="/logout">Logout</a></li>
+                        @endif
+                        @if(\Auth::check()&&\Auth::user()->hasRole('admin'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="/admin">Panel Admin</a>
+                            </li>
+                        @endif
+                        @if(\Auth::check()&&\Auth::user()->hasRole('member'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="/user/mybook">Bukuku</a>
+                            </li>
+                        @endif
                     </ul>
                 </nav>{{-- #nav-menu-container --}}
             </div>
