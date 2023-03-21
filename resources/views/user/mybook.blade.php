@@ -10,7 +10,7 @@
                 <p class="text-white link-nav">
                     <a href="/">Home</a>
                     <span class="lnr lnr-arrow-right"></span>
-                    <a href="/list">List Buku</a>
+                    <a href="/user/mybook">List Buku</a>
                 </p>
             </div>
         </div>

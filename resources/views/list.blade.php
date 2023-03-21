@@ -6,9 +6,13 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Products
+                    Our Products
                 </h1>
-                <p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="products.html"> Products</a></p>
+                <p class="text-white link-nav">
+                    <a href="/">Home </a>  
+                    <span class="lnr lnr-arrow-right"></span>  
+                    <a href="list"> Products</a>
+                </p>
             </div>
         </div>
     </div>
@@ -20,8 +24,8 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 pb-40 header-text text-center">
-                <h1 class="pb-10">Featured Robotics Products to Show</h1>
-                <p>Who are extremely in love with eco friendly system.</p>
+                <h1 class="pb-10">Featured Books Products to Show</h1>
+                <p>Who are extremely in love with books?</p>
             </div>
         </div>
 
@@ -39,7 +43,7 @@
                             Penerbit {{ $books->publisher }}
                         </p>
                         @if (\Auth::user())
-                            <form class="" action="beli/{{$books->id}}" method="post">
+                            <form class="" action="buy/{{$books->id}}" method="post">
                                 {{ csrf_field() }}
                                 <button type="submit" class="btn btn-xs btn-danger" name="button">  Beli</button>
                             </form>

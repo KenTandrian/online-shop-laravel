@@ -40,7 +40,10 @@ class FrontController extends Controller
 
     public function mybook()
     {
-        $book = Transaction::where('user_id', '=', Auth::user()->id)->get();
+        $book = Transaction::where('user_id', '=', Auth::user()->id)
+            ->join('users', 'transactions.user_id', '=', 'users.id')
+            ->join('books', 'transactions.book_id', '=', 'books.id')
+            ->get();
         return view('user/mybook',compact('book'));
     }
 }

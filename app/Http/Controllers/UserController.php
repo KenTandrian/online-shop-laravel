@@ -29,6 +29,8 @@ class UserController extends Controller
         $user->name = $nama;
         $user->email = $email;
         $user->password = $password;
+        $user->attachRole('admin');
+        $user->attachRole('member');
         $user->save();
 
         return redirect('admin/user');
@@ -50,6 +52,8 @@ class UserController extends Controller
         $user->name = $nama;
         $user->email = $email;
         $user->password = $password;
+        $user->attachRole('admin');
+        $user->attachRole('member');
         $user->save();
 
         return redirect('admin/user');

@@ -1,6 +1,7 @@
 <?php
 
 use Database\Seeders\BooksTableSeeder;
+use Database\Seeders\RoleTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,5 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(BooksTableSeeder::class);
+        $this->call(RoleTableSeeder::class);
     }
 }
