@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -46,14 +47,13 @@ Route::group(['prefix'=>'admin'], function() {
     });
 
     // User management
-    Route::get('/user', function () {
-        return view('admin.user.index');
-    });
-    Route::get('/user/create', function () {
-        return view('admin.user.create');
-    });
-    Route::get('/user/update', function () {
-        return view('admin.user.update');
+    Route::group(['prefix'=>'user'], function() {
+        Route::get('/', 'UserController@index');
+        Route::get('create', 'UserController@create');
+        Route::post('/', 'UserController@store');
+        Route::get('{id}/edit', 'UserController@edit');
+        Route::post('{id}/update', 'UserController@update');
+        Route::delete('{id}', 'UserController@destroy');
     });
 
     // Transaction management
