@@ -8,16 +8,16 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form role="form" class="" action="/admin/user/:id/update" method="post">
+        <form role="form" class="" action="/admin/user/{{ $user->id }}/update" method="post">
             {{csrf_field()}}
             <div class="box-body">
                 <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="nama" class="form-control" value=":name" placeholder="Masukkan Nama">
+                    <input type="text" name="nama" class="form-control" value="{{ $user->name }}" placeholder="Masukkan Nama">
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" name="email" class="form-control" value=":email" placeholder="Masukkan Email">
+                    <input type="email" name="email" class="form-control" value="{{ $user->email }}" placeholder="Masukkan Email">
                 </div>
                 <div class="form-group">
                     <label>Password</label>

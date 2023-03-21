@@ -18,12 +18,28 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($user as $data)
                 <tr>
-                    <td>:id</td>
-                    <td>:name</td>
-                    <td>:email</td>
-                    <td>:actions</td>
+                    <td>{{ $data->id }}</td>
+                    <td>{{ $data->name }}</td>
+                    <td>{{ $data->email }}</td>
+                    <td>
+                        <a href="{{ 'user/'.$data->id.'/edit' }}" class="btn btn-xs btn-warning">Edit</a>
+                        <form action="user/{{ $data->id }}" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button 
+                                type="submit"
+                                class="btn btn-xs btn-danger"
+                                name="button"
+                                onclick="confirm('Yakin ingin menghapus?')"
+                            >
+                                Delete
+                            </button>
+                        </form>
+                    </td>
                 </tr>
+                @endforeach
             </tbody>
             <tfoot>
                 <tr>
