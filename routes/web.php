@@ -18,20 +18,17 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/list', function () {
-    return view('list');
-});
+Route::get('/', 'FrontController@index');
+Route::get('/list', 'FrontController@list');
+Route::post('buy/{id}', 'FrontController@buy');
+Route::get('logout', 'FrontController@logout');
+
 Route::get('/detail', function () {
     return view('detail');
 });
 
-Route::group(['prefix'=>'user'], function() {
-    Route::get('/mybook', function () {
-        return view('user.mybook');
-    });
+Route::group(['prefix'=>'user', 'middleware' => ['auth', 'role:member']], function() {
+    Route::get('/mybook', 'FrontController@mybook');
 });
 
 Route::group(['prefix'=>'admin'], function() {

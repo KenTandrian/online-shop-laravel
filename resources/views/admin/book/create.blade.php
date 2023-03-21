@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <label for="publisher">Penerbit</label>
-                    <input type="text" name="publisher" id="publisher" class="form-control" placeholder="Masukkan Nama Pengarang">
+                    <input type="text" name="publisher" id="publisher" class="form-control" placeholder="Masukkan Nama Penerbit">
                 </div>
             </div>
             <!-- /.box-body -->

@@ -28,57 +28,23 @@
         </div>
 
         <div class="row">
+            @foreach($book as $books)
             <div class="col-lg-3 col-md-6">
                 <div class="single-product">
                     <div class="thumb">
                         <img src="img/p1.png" alt="">
                     </div>
                     <div class="details">
-                        <h4>The Upper Eye</h4>
-                        <p>Who are extremely in love with eco friendly system.</p>
+                        <h4>{{ $books->title }}</h4>
+                        <p>
+                            Pengarang {{ $books->author }}<br/>
+                            Penerbit {{ $books->publisher }}
+                        </p>
                         <a href="product-details.html" class="primary-btn text-uppercase">View Details</a>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-product">
-                    <div class="thumb">
-                        <img src="img/p2.png" alt="">
-                    </div>
-                    <div class="details">
-                        <h4>The Crab Wheel</h4>
-                        <p>Who are extremely in love with eco friendly system.</p>
-                        <a href="product-details.html" class="primary-btn text-uppercase">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-product">
-                    <div class="thumb">
-                        <img src="img/p3.png" alt="">
-                    </div>
-                    <div class="details">
-                        <h4>The Plug Ninja</h4>
-                        <p>Who are extremely in love with eco friendly system.</p>
-                        <a href="product-details.html" class="primary-btn text-uppercase">View Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-                <div class="single-product">
-                    <div class="thumb">
-                        <img src="img/p4.png" alt="">
-                    </div>
-                    <div class="details">
-                        <h4>The Controller</h4>
-                        <p>Who are extremely in love with eco friendly system.</p>
-                        <a href="product-details.html" class="primary-btn text-uppercase">View Details</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
