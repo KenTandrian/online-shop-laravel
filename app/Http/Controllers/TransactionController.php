@@ -11,9 +11,7 @@ class TransactionController extends Controller
 {
     public function index()
     {
-        $transaction = Transaction::join('users', 'transactions.user_id', '=', 'users.id')
-            ->join('books', 'transactions.book_id', '=', 'books.id')
-            ->get();
+        $transaction = Transaction::with(['user', 'book'])->get();
         return view('admin.transaction.index', compact('transaction'));
     }
 
@@ -39,8 +37,9 @@ class TransactionController extends Controller
 
     public function edit($id)
     {
-        $transaction = Transaction::find();
-        return view('admin.transaction.update', compact('transaction'));
+        $transaction = Transaction::find($id);
+        $book = Book::get();
+        return view('admin.transaction.update', compact(['transaction', 'book']));
     }
 
     public function update(Request $request, $id)

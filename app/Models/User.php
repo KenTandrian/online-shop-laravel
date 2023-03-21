@@ -28,4 +28,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get the transactions of this user.
+     */
+    public function transactions() 
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

@@ -22,12 +22,12 @@
                 @foreach ($transaction as $data)
                 <tr>
                     <td>{{ $data->id }}</td>
-                    <td>{{ $data->name }}</td>
-                    <td>{{ $data->title }}</td>
+                    <td>{{ $data->user->name }}</td>
+                    <td>{{ $data->book->title }}</td>
                     <td>{{ $data->amount }}</td>
                     <td>
                         <a href="#" class="btn btn-xs btn-info">Detail</a>
-                        <a href="#" class="btn btn-xs btn-warning">Edit</a>
+                        <a href="{{ 'transaction/'.$data->id.'/edit' }}" class="btn btn-xs btn-warning">Edit</a>
                         <a href="#" class="btn btn-xs btn-danger">Delete</a>
                     </td>
                 </tr>
