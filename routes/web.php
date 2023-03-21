@@ -35,6 +35,11 @@ Route::group(['prefix'=>'user'], function() {
 });
 
 Route::group(['prefix'=>'admin'], function() {
+    Route::get('/',function() {
+        return view('admin.index');
+    });
+    Route::get('logout','UserController@logout');
+    
     // Book management
     Route::group(['prefix'=>'book'], function() {
         Route::get('/', 'BookController@index');
