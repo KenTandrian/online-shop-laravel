@@ -4,7 +4,7 @@
     <div class="box-header">
         <h3 class="box-title">Daftar Buku</h3>
 
-        <a href="book/create" class="btn btn-info btn-md pull-right"><i class="fa fa-plus"> Tambah</i> </a>
+        <a href="book/create" class="btn btn-info btn-md pull-right"><i class="fa fa-plus"></i> Tambah</a>
     </div>
     <!-- /.box-header -->
     <div class="box-body">

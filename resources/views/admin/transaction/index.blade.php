@@ -4,7 +4,7 @@
     <div class="box-header">
         <h3 class="box-title">Daftar Transaksi</h3>
 
-        <a href="transaction/create" class="btn btn-info btn-md pull-right"><i class="fa fa-plus"> Tambah</i> </a>
+        <a href="transaction/create" class="btn btn-info btn-md pull-right"><i class="fa fa-plus"></i> Tambah</a>
     </div>
     <!-- /.box-header -->
     <div class="box-body">
