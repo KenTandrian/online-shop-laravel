@@ -39,7 +39,7 @@
                             Penerbit {{ $books->publisher }}
                         </p>
                         @if (\Auth::user())
-                            <form class="" action="beli/{{$bukus->id}}" method="post">
+                            <form class="" action="beli/{{$books->id}}" method="post">
                                 {{ csrf_field() }}
                                 <button type="submit" class="btn btn-xs btn-danger" name="button">  Beli</button>
                             </form>
