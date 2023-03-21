@@ -44,4 +44,15 @@ Route::group(['prefix'=>'admin'], function() {
     Route::get('/book/update', function () {
         return view('admin.book.update');
     });
+
+    // User management
+    Route::get('/user', function () {
+        return view('admin.user.index');
+    });
+    Route::get('/user/create', function () {
+        return view('admin.user.create');
+    });
+    Route::get('/user/update', function () {
+        return view('admin.user.update');
+    });
 });
