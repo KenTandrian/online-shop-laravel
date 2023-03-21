@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use App\Models\Transaction;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class FrontController extends Controller
@@ -40,10 +41,10 @@ class FrontController extends Controller
 
     public function mybook()
     {
-        $book = Transaction::where('user_id', '=', Auth::user()->id)
-            ->join('users', 'transactions.user_id', '=', 'users.id')
-            ->join('books', 'transactions.book_id', '=', 'books.id')
+        $transactions = User::find(Auth::user()->id)
+            ->transactions()
+            ->with(['user', 'book'])
             ->get();
-        return view('user/mybook',compact('book'));
+        return view('user/mybook',compact('transactions'));
     }
 }

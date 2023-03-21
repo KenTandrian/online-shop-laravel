@@ -28,17 +28,17 @@
         </div>
 
         <div class="row">
-            @foreach($book as $books)
+            @foreach($transactions as $transaction)
             <div class="col-lg-3 col-md-6">
                 <div class="single-product">
                     <div class="thumb">
                         <img src="img/p1.png" alt="">
                     </div>
                     <div class="details">
-                        <h4>{{ $books->title }}</h4>
+                        <h4>{{ $transaction->book->title }}</h4>
                         <p>
-                            Pengarang {{ $books->author }}<br/>
-                            Penerbit {{ $books->publisher }}
+                            Pengarang {{ $transaction->book->author }}<br/>
+                            Penerbit {{ $transaction->book->publisher }}
                         </p>
                         <a href="product-details.html" class="primary-btn text-uppercase">View Details</a>
                     </div>
