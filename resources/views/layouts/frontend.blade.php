@@ -76,10 +76,10 @@
                     <div class="single-footer-widget">
                         <h6>Top Products</h6>
                         <ul class="footer-nav">
-                            <li><a href="#">Books 1</a></li>
-                            <li><a href="#">Books 2</a></li>
-                            <li><a href="#">Books 3</a></li>
-                            <li><a href="#">Books 4</a></li>
+                            <li><a href="#">Eloquent JavaScript, Third Edition</a></li>
+                            <li><a href="#">Practical Modern JavaScript</a></li>
+                            <li><a href="#">Understanding ECMAScript 6</a></li>
+                            <li><a href="#">Speaking JavaScript</a></li>
                         </ul>
                     </div>
                 </div>
