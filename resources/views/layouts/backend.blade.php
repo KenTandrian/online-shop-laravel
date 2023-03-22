@@ -222,9 +222,9 @@
     <!-- AdminLTE App -->
     <script src="{{ URL::asset('adminlte/dist/js/adminlte.min.js')}}"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="{{ URL::asset('adminlte/dist/js/pages/dashboard.js')}}"></script>
+    {{-- <script src="{{ URL::asset('adminlte/dist/js/pages/dashboard.js')}}"></script> --}}
     <!-- AdminLTE for demo purposes -->
-    <script src="{{ URL::asset('adminlte/dist/js/demo.js')}}"></script>
+    {{-- <script src="{{ URL::asset('adminlte/dist/js/demo.js')}}"></script> --}}
     @yield('js')
 </body>
 </html>
