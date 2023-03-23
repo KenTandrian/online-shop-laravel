@@ -51,7 +51,7 @@ jobs:
         with:
           php-version: ${{ matrix.php-version }}
           extensions: mbstring, dom, fileinfo, ${{ matrix.connection }}
-          coverage: none
+          coverage: pcov
       - name: Check PHP Version
         run: php -v
       - name: Check Composer Version
