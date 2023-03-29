@@ -33,8 +33,8 @@ class UserController extends Controller
         $user->password = $password;
         $user->save();
 
-        if ($isAdmin) $user->attachRole('admin');
-        if ($isMember) $user->attachRole('member');
+        if ($isAdmin) $user->addRole('admin');
+        if ($isMember) $user->addRole('member');
         
         return redirect('admin/user');
     }
@@ -64,11 +64,11 @@ class UserController extends Controller
         $isPreviouslyAdmin = $user->hasRole('admin');
         $isPreviouslyMember = $user->hasRole('member');
 
-        if ($isAdmin && !$isPreviouslyAdmin) $user->attachRole('admin');
-        else if (!$isAdmin && $isPreviouslyAdmin) $user->detachRole('admin');
+        if ($isAdmin && !$isPreviouslyAdmin) $user->addRole('admin');
+        else if (!$isAdmin && $isPreviouslyAdmin) $user->removeRole('admin');
         
-        if ($isMember && !$isPreviouslyMember) $user->attachRole('member');
-        else if (!$isMember && $isPreviouslyMember) $user->detachRole('member');
+        if ($isMember && !$isPreviouslyMember) $user->addRole('member');
+        else if (!$isMember && $isPreviouslyMember) $user->removeRole('member');
 
         return redirect('admin/user');
     }
