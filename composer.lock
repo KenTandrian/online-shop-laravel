@@ -2508,16 +2508,16 @@
         },
         {
             "name": "santigarcor/laratrust",
-            "version": "8.2.0",
+            "version": "8.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/santigarcor/laratrust.git",
-                "reference": "a7459625cee7d0e2af59335ebbfb716f62096a04"
+                "reference": "58d75e531de46f162d61f91f17e771a9ecb1132e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/a7459625cee7d0e2af59335ebbfb716f62096a04",
-                "reference": "a7459625cee7d0e2af59335ebbfb716f62096a04",
+                "url": "https://api.github.com/repos/santigarcor/laratrust/zipball/58d75e531de46f162d61f91f17e771a9ecb1132e",
+                "reference": "58d75e531de46f162d61f91f17e771a9ecb1132e",
                 "shasum": ""
             },
             "require": {
@@ -2571,7 +2571,7 @@
             ],
             "support": {
                 "issues": "https://github.com/santigarcor/laratrust/issues",
-                "source": "https://github.com/santigarcor/laratrust/tree/8.2.0"
+                "source": "https://github.com/santigarcor/laratrust/tree/8.2.1"
             },
             "funding": [
                 {
@@ -2579,7 +2579,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-17T14:44:41+00:00"
+            "time": "2023-04-24T20:19:58+00:00"
         },
         {
             "name": "symfony/console",
