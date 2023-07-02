@@ -4,16 +4,12 @@ on:
     - cron: "0 0 * * 0"
   workflow_dispatch:
 
-env:
-  NODE_VERSION: 18.x
-  PHP_VERSION: 8.1
-
 jobs:
   cache-composer:
     name: Cache Composer with PHP 8.1
     uses: KenTandrian/workflows/.github/workflows/cache-composer.yml@main
     with:
-      php-version: ${{ env.PHP_VERSION }}
+      php-version: 8.1
 
   cache-node:
     name: Cache with Node.js 18.x
