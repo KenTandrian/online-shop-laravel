@@ -11,70 +11,13 @@ env:
 jobs:
   cache-composer:
     name: Cache Composer with PHP 8.1
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Setup PHP ${{ env.PHP_VERSION }}
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ env.PHP_VERSION }}
-          extensions: mbstring, dom, fileinfo, sqlite, mysql, pgsql
-          coverage: none
-
-      - name: Check PHP Version
-        run: php -v
-
-      - name: Check Composer Version
-        run: composer -V
-
-      - name: Check PHP Extensions
-        run: php -m
-
-      - name: Validate composer.json and composer.lock
-        run: composer validate
-
-      - name: Get Composer Cache Directory
-        id: composer-cache
-        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-
-      - name: Cache Composer Files
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ env.PHP_VERSION }}-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-${{ env.PHP_VERSION }}-${{ hashFiles('**/composer.lock') }}
-            ${{ runner.os }}-composer-${{ env.PHP_VERSION }}
-            ${{ runner.os }}-composer-
-
-      - name: Install Composer Dependencies
-        run: composer install --no-progress --no-interaction --prefer-dist --optimize-autoloader
+    uses: KenTandrian/workflows/.github/workflows/cache-composer.yml@main
+    with:
+      php-version: ${{ env.PHP_VERSION }}
 
   cache-node:
     name: Cache with Node.js 18.x
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Get Yarn Cache Directory
-        id: yarn-cache-dir
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-
-      - name: Cache Yarn
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.yarn-cache-dir.outputs.dir }}
-          key: node-cache-${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            node-cache-${{ runner.os }}-yarn-
-
-      - name: Setup Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+    uses: KenTandrian/workflows/.github/workflows/cache.yml@main
+    with:
+      caches: node
+      package-manager: yarn
