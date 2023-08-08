@@ -1,4 +1,6 @@
 {
+    "name": "online-shop",
+    "version": "0.2.13",
     "private": true,
     "scripts": {
         "dev": "yarn development",
@@ -25,6 +27,5 @@
         "vue-loader": "^17.2.2",
         "vue-template-compiler": "^2.7.14",
         "webpack": "^5.88.2"
-    },
-    "version": "0.2.13"
+    }
 }
