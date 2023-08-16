@@ -1,6 +1,6 @@
 {
     "name": "online-shop",
-    "version": "0.2.18",
+    "version": "0.2.22",
     "private": true,
     "scripts": {
         "dev": "yarn development",
