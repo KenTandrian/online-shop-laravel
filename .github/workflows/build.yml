@@ -15,7 +15,7 @@ jobs:
   #############
   tests:
     runs-on: ubuntu-latest
-    name: Testsuite ${{ matrix.testsuite }} with PHP ${{ matrix.php-version }} + ${{ matrix.connection }}
+    name: Testsuite ${{ matrix.testsuite }} with PHP + ${{ matrix.connection }}
 
     services:
       pgsql:
@@ -31,14 +31,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php-version: ["8.2"]
+        php-version: ["8.3"]
         connection: [sqlite, mysql, pgsql]
         testsuite: [Unit]
         coverage: [true] # run test with coverage, if 'coverage-with' match with the connection
         include:
           - connection: sqlite
             testsuite: Integration
-            php-version: "8.2"
+            php-version: "8.3"
             coverage: false
 
     steps:
